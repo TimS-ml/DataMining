@@ -1,6 +1,6 @@
 # DataMining Data
 
-This help me quickly go through the course material in Colab
+This help me quickly go through course materials in google colab
 
 ```python
 import io
