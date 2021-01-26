@@ -19,10 +19,20 @@ f = requests.get(url).content
 data = np.loadtxt(gzip.open(io.BytesIO(f), 'rt'),
                   delimiter=',', dtype=np.float32)
 
+# if is .zip file
+# z = zipfile.ZipFile(io.BytesIO(r.content))
+# z.extractall()
+
 # Example 3
 url = 'https://github.com/TimS-ml/DataMining/blob/master/z_Other/diabetes.csv.gz?raw=true'
 filename = url.split('/')[-1].split('?')[0]
 with open(filename, "wb") as f:
     r = requests.get(url)
     f.write(r.content)
+```
+
+Alternatively
+```python
+!wget <your url>
+!unzip images.zip /content/images/
 ```
