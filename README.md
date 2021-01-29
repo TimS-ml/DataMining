@@ -46,7 +46,8 @@ import librosa
 import soundfile as sf
 
 url = "https://raw.githubusercontent.com/Atcold/pytorch-Deep-Learning/master/res/win_xp_shutdown.wav"
-data, samplerate = sf.read(io.BytesIO(urlopen(url).read()))
+data, samplerate = sf.read(io.BytesIO(urlopen(url).read()))  # this
+data, samplerate = librosa.load(io.BytesIO(urlopen(url).read()))  # or this
 ```
 
 Alternatively
