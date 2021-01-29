@@ -4,6 +4,8 @@ I'm TA of `data mining for business` course in Fordham University winter 2020
 
 This repo helps me quickly load data in google colab
 
+Check `six.moves` if you are using python2
+
 \*.csv
 ```python
 import io
@@ -41,7 +43,7 @@ with open(filename, "wb") as f:
 \*.wav
 ```python
 import io
-from six.moves.urllib.request import urlopen
+from urllib.request import urlopen
 import librosa
 import soundfile as sf
 
