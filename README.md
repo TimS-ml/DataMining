@@ -16,6 +16,14 @@ f = requests.get(url).content
 df = pd.read_csv(io.StringIO(f.decode('utf-8')))
 ```
 
+or
+
+```python
+url = 'https://raw.githubusercontent.com/TimS-ml/DataMining/master/0_TakeHome/winemag-data-130k-v2.csv'
+reviews = pd.read_csv(url, sep=',', index_col=0)
+```
+
+
 \*.csv.gz
 ```python
 import io
